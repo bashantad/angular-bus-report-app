@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BusesComponent } from './buses.component';
 import {BusService} from '../bus.service';
+import {BusDetailComponent} from '../bus-detail/bus-detail.component';
+import {BusTimeComponent} from '../bus-time/bus-time.component';
 
 describe('BusesComponent', () => {
   let component: BusesComponent;
@@ -9,7 +11,7 @@ describe('BusesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BusesComponent ],
+      declarations: [ BusesComponent, BusDetailComponent, BusTimeComponent ],
       providers: [BusService]
     })
     .compileComponents();
@@ -18,10 +20,11 @@ describe('BusesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BusesComponent);
     component = fixture.componentInstance;
+    component.buses = [];
     fixture.detectChanges();
   });
 
-  it('should create the component', () => {
+  it('should create the Buses component', () => {
     expect(component).toBeTruthy();
   });
 });

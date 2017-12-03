@@ -1,0 +1,20 @@
+.time__table ul li{
+  list-style: none;
+  display: block;
+}
+
+.bus_details_wrap_title{
+  background: #d9edf7;
+  display: inline-block;
+}
+
+.clearfix{
+  clear:both;
+}
+
+.bus_details_wrap_title .item{
+  width: 200px;
+  float: left;
+  padding: 10px;
+  font-weight: bold;
+}

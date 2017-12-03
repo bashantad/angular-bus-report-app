@@ -1,0 +1,15 @@
+<div class="bus_details_wrap clearfix" *ngIf="busTime">
+  <div class="bus_details_item">
+    {{ busTime.busId }}
+  </div>
+  <div class="bus_details_item">
+    <strong>
+      {{busNo}}
+    </strong>
+    {{variant ? variant : 'Unknown'}}
+  </div>
+  <div class="{{statusClass}} bus_details_item">
+    {{ status }}
+  </div>
+</div>
+

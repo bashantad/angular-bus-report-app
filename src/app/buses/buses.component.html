@@ -1,7 +1,10 @@
-<ul class="bus__service" *ngIf="buses">
+<ul class="bus__service" *ngIf="buses.length > 0">
   <li *ngFor="let bus of buses">
-    <span>
+    <span class="organisation" (click)="toggleBus(bus)">
       {{bus.organisation}} - {{bus.date}}
     </span>
+    <div *ngIf="bus.visible">
+      <app-bus-detail [busTimes]="bus.busData"></app-bus-detail>
+    </div>
   </li>
 </ul>

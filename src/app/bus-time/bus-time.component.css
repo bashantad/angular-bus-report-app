@@ -1,0 +1,22 @@
+.on_time{
+  color: #3c763d;
+}
+
+.late{
+  color: #3c63c4;
+}
+
+.early{
+  color: #e0573c;
+}
+
+.bus_details_item{
+  width: 200px;
+  float: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.clearfix{
+  clear: both;
+}

@@ -2,6 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { BusesComponent } from './buses/buses.component';
 import { BusService } from './bus.service';
+import { BusDetailComponent } from './bus-detail/bus-detail.component';
+import { BusTimeComponent } from './bus-time/bus-time.component';
 
 describe('AppComponent', () => {
 
@@ -9,7 +11,9 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        BusesComponent
+        BusesComponent,
+        BusDetailComponent,
+        BusTimeComponent
       ],
       providers: [BusService]
     }).compileComponents();
@@ -33,5 +37,13 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Bus Reports');
   }));
+
+  it('renders bus organisation and date', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.organisation').textContent).toContain('Sydney Buses - 25/09/2015');
+  }));
+
 
 });

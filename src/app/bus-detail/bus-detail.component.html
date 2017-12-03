@@ -1,0 +1,18 @@
+<div *ngIf="busTimes">
+  <div class="bus_details_wrap_title">
+      <div class="item">
+        Bus ID
+      </div>
+      <div class="item">
+        Route Variant
+      </div>
+      <div class="item">
+        Status
+      </div>
+  </div>
+  <div class="clearfix"></div>
+  <div *ngFor="let busTime of busTimes">
+    <app-bus-time [busTime]="busTime" ngClass="app-bus-time"></app-bus-time>
+  </div>
+  <div class="clearfix"></div>
+</div>

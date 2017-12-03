@@ -17,10 +17,13 @@ export class BusesComponent implements OnInit {
     this.getBuses();
   }
 
+  toggleBus(bus: Bus) {
+    bus.visible = !bus.visible;
+  }
+
   getBuses(): void {
     this.busService.getAll()
       .subscribe(buses => {
-        //console.log('All buses', buses);
         this.buses = buses;
       });
   }

@@ -1,7 +1,8 @@
-import { BusData } from './bus.data';
+import { BusTime } from './bus.time';
 export class Bus {
   organisation: string;
   date: string;
-  busData: BusData[];
+  busData: BusTime[];
+  visible: boolean;
 }
 

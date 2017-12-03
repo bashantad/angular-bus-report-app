@@ -9,7 +9,7 @@ describe('BusService', () => {
     });
   });
 
-  it('should be created', inject([BusService], (service: BusService) => {
+  it('should create the bus service component', inject([BusService], (service: BusService) => {
     expect(service).toBeTruthy();
   }));
 });
