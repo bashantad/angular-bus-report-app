@@ -1,0 +1,10 @@
+ul.bus__service {
+  padding: 0px;
+  margin: 0px;
+}
+.bus__service li{
+  font-size: 22px;
+  color: #666;
+  padding: 10px 0px;
+  list-style: none;
+}

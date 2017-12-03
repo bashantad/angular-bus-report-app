@@ -1,0 +1,7 @@
+<ul class="bus__service" *ngIf="buses">
+  <li *ngFor="let bus of buses">
+    <span>
+      {{bus.organisation}} - {{bus.date}}
+    </span>
+  </li>
+</ul>
