@@ -11,10 +11,9 @@
 }
 
 .bus_details_item{
-  width: 200px;
-  float: left;
+  width: 30%;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  float: left;
 }
 
 .clearfix{

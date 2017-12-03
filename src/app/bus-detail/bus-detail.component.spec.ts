@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule} from '@angular/forms';
 
 import { BusDetailComponent } from './bus-detail.component';
 import { BusTimeComponent } from '../bus-time/bus-time.component';
@@ -9,6 +10,7 @@ describe('BusDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ BusDetailComponent, BusTimeComponent ]
     })
     .compileComponents();

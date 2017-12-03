@@ -1,7 +1,8 @@
 <ul class="bus__service" *ngIf="buses.length > 0">
-  <li *ngFor="let bus of buses">
-    <span class="organisation" (click)="toggleBus(bus)">
-      {{bus.organisation}} - {{bus.date}}
+  <li *ngFor="let bus of buses" class="bus__service_wrap">
+    <span class="organisation {{bus.visible ? 'expanded': 'collapsed'}}" (click)="toggleBus(bus)">
+      {{bus.organisation}} <span class="date">- {{bus.date}} </span>
+      <span class="icon">&nbsp;&nbsp;</span>
     </span>
     <div *ngIf="bus.visible">
       <app-bus-detail [busTimes]="bus.busData"></app-bus-detail>

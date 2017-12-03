@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule} from '@angular/forms';
 import { BusesComponent } from './buses.component';
-import {BusService} from '../bus.service';
-import {BusDetailComponent} from '../bus-detail/bus-detail.component';
-import {BusTimeComponent} from '../bus-time/bus-time.component';
+import { BusService } from '../bus.service';
+import { BusDetailComponent } from '../bus-detail/bus-detail.component';
+import { BusTimeComponent } from '../bus-time/bus-time.component';
 
 describe('BusesComponent', () => {
   let component: BusesComponent;
@@ -11,6 +11,7 @@ describe('BusesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ BusesComponent, BusDetailComponent, BusTimeComponent ],
       providers: [BusService]
     })

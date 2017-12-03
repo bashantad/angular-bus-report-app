@@ -1,4 +1,4 @@
-<div *ngIf="busTimes">
+<div *ngIf="busTimes" class="bus_details_wrap">
   <div class="bus_details_wrap_title">
       <div class="item">
         Bus ID
@@ -11,8 +11,16 @@
       </div>
   </div>
   <div class="clearfix"></div>
-  <div *ngFor="let busTime of busTimes">
+  <div *ngFor="let busTime of busTimes; let isEven=even;" [class.even]="isEven">
     <app-bus-time [busTime]="busTime" ngClass="app-bus-time"></app-bus-time>
   </div>
   <div class="clearfix"></div>
+  <div *ngIf="notes.length">
+    <h4>Saved notes</h4>
+    <div *ngFor="let note of notes">
+      {{note}}
+    </div>
+  </div>
+  <textarea [(ngModel)]='note' class="form-control" rows="4" placeholder="Enter notes here"></textarea>
+  <button (click)="saveNotes()">Save Notes</button>
 </div>

@@ -7,10 +7,18 @@ import { BusTime } from '../bus.time';
 })
 export class BusDetailComponent implements OnInit {
 
+  notes: string[];
+  note: string;
   @Input() busTimes: BusTime[];
   constructor() { }
 
   ngOnInit() {
+    this.notes = [];
+  }
+
+  saveNotes(): void {
+    this.notes.push(this.note);
+    this.note = '';
   }
 
 }

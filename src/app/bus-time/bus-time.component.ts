@@ -22,12 +22,14 @@ export class BusTimeComponent implements OnInit {
 
   loadStatus() {
     const timeDeviation = this.busTime.deviationFromTimetable;
-    if (timeDeviation > 275) {
+    if (timeDeviation >= 275) {
       this.status = 'Late';
-    }else if (timeDeviation < -200) {
+    } else if (timeDeviation <= -200) {
       this.status = 'Early';
-    }else {
+    } else if (timeDeviation > -200 || timeDeviation < 275) {
       this.status = 'On Time';
+    } else {
+      this.status = 'Unknown';
     }
     this.statusClass = this.status.toLowerCase().split(' ').join('_');
   }

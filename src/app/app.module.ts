@@ -7,6 +7,8 @@ import { BusesComponent } from './buses/buses.component';
 import { BusService } from './bus.service';
 import { BusDetailComponent } from './bus-detail/bus-detail.component';
 import { BusTimeComponent } from './bus-time/bus-time.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { BusTimeComponent } from './bus-time/bus-time.component';
     BusTimeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [BusService],
   bootstrap: [AppComponent]
