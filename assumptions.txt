@@ -1,0 +1,12 @@
+1. Status for the bus time is calculated as follows
+```
+  if deviationFromTimetable >= 275 then Late
+  else if deviationFromTimetable <= -200 then Early
+  else if (deviationFromTimetable > -200 || deviationFromTimetable < 275) then On Time
+  else Unknown
+```
+2. First string(separated by a space) in route variant is considered as bus no (if the length is less than 2, Unknown is displayed in the UI)
+3. Due to lack of time, only 10 tests have been written.
+4. Notes can be added and has a data binding(but won't be retained if you refresh the page, No deletion, validation)
+5. CSS can be improved(haven't used any frameworks(eg: Bootstrap). Expandable/Collapsable css can include icon as well.
+6. Data is fetched from the json file. In the real world example, we usually get them via external service using HttpClient.
